@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
+import { Inter, Noto_Sans_JP } from "next/font/google";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const notoSansJp = Noto_Sans_JP({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-noto-jp",
+});
 
 const siteName = "nanacha";
 const description =
@@ -52,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
+      <body className={`${inter.variable} ${notoSansJp.variable}`}>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="nanacha ホーム">
             nanacha
