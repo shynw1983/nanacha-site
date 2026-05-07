@@ -18,7 +18,7 @@ export default function SiteLayout({
     <>
       <header className="site-header">
         <Link className="brand" href="/" aria-label="nanacha ホーム">
-          nanacha
+          <img src="/images/nanacha-logo.png" alt="nanacha" />
         </Link>
         <nav className="nav" aria-label="メインナビゲーション">
           {navItems.map((item) => (
@@ -31,7 +31,9 @@ export default function SiteLayout({
       {children}
       <footer className="footer">
         <div>
-          <p className="footer-brand">nanacha</p>
+          <p className="footer-brand">
+            <img src="/images/nanacha-logo.png" alt="nanacha" />
+          </p>
           <p>福岡の毎日に、軽やかな日本茶ミルクティーを。</p>
         </div>
         <div className="footer-links">

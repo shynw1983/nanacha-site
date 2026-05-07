@@ -104,7 +104,9 @@ export default async function Home() {
         <figure className="hero-visual" aria-label="nanachaのミルクティーとタピオカ" />
         <div className="hero-copy">
           <p className="eyebrow">FUKUOKA MILK TEA / TAPIOCA</p>
-          <h1>nanacha</h1>
+          <h1 className="hero-logo">
+            <img src="/images/nanacha-logo.png" alt="nanacha tapioca & more" />
+          </h1>
           <p className="lead">
             清川で、昼から夜まで。日本茶ミルクティーとタピオカ。
           </p>
