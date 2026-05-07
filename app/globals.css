@@ -273,6 +273,18 @@ h3 {
   border: 1px solid var(--line);
 }
 
+.menu-category + .menu-category {
+  margin-top: 64px;
+}
+
+.menu-category-head {
+  margin-bottom: 24px;
+}
+
+.menu-category-head h2 {
+  font-size: clamp(26px, 3.2vw, 44px);
+}
+
 .menu-row {
   align-items: start;
   background: var(--paper);

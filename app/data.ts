@@ -1,4 +1,23 @@
-export const featuredDrinks = [
+export type MenuItem = {
+  name: string;
+  tag: string;
+  description: string;
+  price: string;
+  category?: string;
+  imageUrl?: string;
+  isSoldOut?: boolean;
+};
+
+export type SeasonalItem = {
+  name: string;
+  description: string;
+  tag?: string;
+  price?: string;
+  imageUrl?: string;
+  isSoldOut?: boolean;
+};
+
+export const featuredDrinks: MenuItem[] = [
   {
     name: "nanacha ミルクティー",
     tag: "Signature",

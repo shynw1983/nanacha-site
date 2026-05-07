@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { featuredDrinks, seasonalDrinks } from "./data";
+import { getFeaturedDrinks, getSeasonalDrinks } from "../lib/menu";
 
 const shopJsonLd = {
   "@context": "https://schema.org",
@@ -18,7 +18,12 @@ const shopJsonLd = {
   url: "https://nanacha.jp",
 };
 
-export default function Home() {
+export default async function Home() {
+  const [featuredDrinks, seasonalDrinks] = await Promise.all([
+    getFeaturedDrinks(),
+    getSeasonalDrinks(),
+  ]);
+
   return (
     <main>
       <script

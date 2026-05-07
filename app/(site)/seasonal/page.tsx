@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { seasonalDrinks } from "../data";
+import { getSeasonalDrinks } from "../../lib/menu";
 
 export const metadata: Metadata = {
   title: "季節限定",
@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SeasonalPage() {
+export default async function SeasonalPage() {
+  const seasonalDrinks = await getSeasonalDrinks();
+
   return (
     <main>
       <section className="page-hero">
@@ -24,7 +26,9 @@ export default function SeasonalPage() {
         <div className="grid">
           {seasonalDrinks.map((drink) => (
             <article className="item" key={drink.name}>
-              <span className="tag">Limited</span>
+              <span className="tag">
+                {drink.isSoldOut ? "Sold Out" : drink.tag || "Limited"}
+              </span>
               <h3>{drink.name}</h3>
               <p>{drink.description}</p>
             </article>
