@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 const navItems = [
   { href: "/menu", label: "メニュー" },
   { href: "/shop", label: "店舗情報" },
+  { href: "/#order", label: "注文方法" },
   { href: "/seasonal", label: "季節限定" },
   { href: "/about", label: "nanachaについて" },
 ];

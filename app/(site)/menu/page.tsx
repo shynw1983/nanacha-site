@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { getMenuItems, groupMenuItems } from "../../lib/menu";
 
 export const metadata: Metadata = {
-  title: "メニュー",
+  title: "メニュー | 福岡のミルクティー・タピオカ",
   description:
-    "nanachaのミルクティー、黒糖タピオカ、抹茶ミルク、ほうじ茶ミルクなどのメニュー一覧。",
+    "福岡のnanachaメニュー。ミルクティー、黒糖タピオカ、抹茶ミルク、ほうじ茶ミルク、季節限定ドリンクを掲載しています。",
   alternates: {
     canonical: "/menu",
   },
@@ -13,15 +13,41 @@ export const metadata: Metadata = {
 export default async function MenuPage() {
   const menuItems = await getMenuItems();
   const groupedMenu = groupMenuItems(menuItems);
+  const menuJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    name: "nanacha メニュー",
+    hasMenuSection: Object.entries(groupedMenu).map(([category, drinks]) => ({
+      "@type": "MenuSection",
+      name: category,
+      hasMenuItem: drinks.map((drink) => ({
+        "@type": "MenuItem",
+        name: drink.name,
+        description: drink.description,
+        offers: {
+          "@type": "Offer",
+          price: drink.price.replace("¥", ""),
+          priceCurrency: "JPY",
+          availability: drink.isSoldOut
+            ? "https://schema.org/SoldOut"
+            : "https://schema.org/InStock",
+        },
+      })),
+    })),
+  };
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd) }}
+      />
       <section className="page-hero">
         <p className="eyebrow">MENU</p>
-        <h1>メニュー</h1>
+        <h1>福岡のミルクティーとタピオカ。</h1>
         <p className="lead">
-          日本茶の香りを生かしたミルクティーと、福岡の日常で選びやすい
-          タピオカドリンク。気分に合わせて、軽く、まっすぐに。
+          nanachaのメニュー一覧。ミルクティー、黒糖タピオカ、抹茶ミルク、
+          ほうじ茶ミルク、季節限定ドリンクを、気分に合わせて選べます。
         </p>
       </section>
       <section className="section">
