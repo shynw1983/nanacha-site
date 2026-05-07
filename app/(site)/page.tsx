@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { instagramUrl, uberEatsUrl } from "../links";
 import { getFeaturedDrinks, getSeasonalDrinks } from "../lib/menu";
 
 const shopJsonLd = {
@@ -126,6 +127,14 @@ export default async function Home() {
             <Link className="button ghost" href="#order">
               注文方法
             </Link>
+            <a
+              className="button ghost"
+              href={instagramUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </section>
@@ -206,7 +215,12 @@ export default async function Home() {
           <a className="button soft" href="#" aria-disabled="true">
             LINEで注文
           </a>
-          <a className="button ghost" href="#" aria-disabled="true">
+          <a
+            className="button ghost"
+            href={uberEatsUrl}
+            rel="noreferrer"
+            target="_blank"
+          >
             Uber Eats
           </a>
         </div>

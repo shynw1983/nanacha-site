@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { instagramUrl, uberEatsUrl } from "../../links";
 
 export const metadata: Metadata = {
   title: "店舗情報 | 福岡市中央区清川",
@@ -65,6 +66,22 @@ export default function ShopPage() {
             </a>
             <a className="button soft" href="#" aria-disabled="true">
               LINEで注文
+            </a>
+            <a
+              className="button ghost"
+              href={instagramUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Instagram
+            </a>
+            <a
+              className="button ghost"
+              href={uberEatsUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Uber Eats
             </a>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { instagramUrl, uberEatsUrl } from "../links";
 
 const navItems = [
   { href: "/menu", label: "メニュー" },
@@ -40,6 +41,12 @@ export default function SiteLayout({
           <Link href="/menu">メニュー</Link>
           <Link href="/shop">店舗情報</Link>
           <Link href="/about">ブランド</Link>
+          <a href={instagramUrl} rel="noreferrer" target="_blank">
+            Instagram
+          </a>
+          <a href={uberEatsUrl} rel="noreferrer" target="_blank">
+            Uber Eats
+          </a>
         </div>
       </footer>
     </>
