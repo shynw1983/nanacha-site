@@ -134,7 +134,10 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">REASON</p>
-            <h2>清川で、昼にも夜にも選べる一杯。</h2>
+            <h2>
+              清川で、昼にも夜にも選べる一杯。
+              <img className="title-icon" src="/images/icons/icon-dog.png" alt="" />
+            </h2>
           </div>
           <p>
             清川の街に合う、軽さと香り。
@@ -155,7 +158,10 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">MENU</p>
-            <h2>ミルクティー、タピオカ、日本茶。</h2>
+            <h2>
+              ミルクティー、タピオカ、日本茶。
+              <img className="title-icon pearls" src="/images/icons/icon-pearls.png" alt="" />
+            </h2>
           </div>
           <Link className="button ghost" href="/menu">
             すべてのメニュー
@@ -176,7 +182,10 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">HOW TO ORDER</p>
-            <h2>はじめてでも、いつもの一杯でも。</h2>
+            <h2>
+              はじめてでも、いつもの一杯でも。
+              <img className="title-icon cup" src="/images/icons/icon-cup.png" alt="" />
+            </h2>
           </div>
           <p>
             お茶、甘さ、氷、トッピングを選んで。
@@ -207,7 +216,10 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">SEASONAL</p>
-            <h2>季節の余白を、一杯に。</h2>
+            <h2>
+              季節の余白を、一杯に。
+              <img className="title-icon sparkle" src="/images/icons/icon-sparkle.png" alt="" />
+            </h2>
           </div>
           <Link className="button ghost" href="/seasonal">
             季節限定を見る
@@ -228,7 +240,10 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">FAQ</p>
-            <h2>よくある質問。</h2>
+            <h2>
+              よくある質問。
+              <img className="title-icon heart" src="/images/icons/icon-heart.png" alt="" />
+            </h2>
           </div>
           <p>
             来店前に知っておきたいこと。
@@ -248,7 +263,10 @@ export default async function Home() {
         <div className="split">
           <div>
             <p className="eyebrow">SHOP</p>
-            <h2>福岡市中央区清川。夜まで開いているテイクアウトスタンド。</h2>
+            <h2>
+              福岡市中央区清川。夜まで開いているテイクアウトスタンド。
+              <img className="title-icon wave" src="/images/icons/icon-wave.png" alt="" />
+            </h2>
           </div>
           <dl className="info-list">
             <div className="info-row">
