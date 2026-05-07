@@ -78,17 +78,21 @@ main {
 
 .hero {
   display: grid;
-  gap: clamp(36px, 6vw, 88px);
-  grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.72fr);
+  gap: clamp(40px, 6vw, 84px);
+  grid-template-columns: 1fr;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: none;
   min-height: calc(100vh - 84px);
-  padding: clamp(56px, 8vw, 112px) clamp(20px, 5vw, 72px) 48px;
+  padding: clamp(28px, 4vw, 56px) 0 clamp(64px, 8vw, 104px);
 }
 
 .hero-copy {
   align-self: center;
-  max-width: 760px;
+  animation: fadeUp 820ms ease both;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 clamp(20px, 5vw, 72px);
+  text-align: center;
 }
 
 .eyebrow {
@@ -142,6 +146,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 18px 32px;
+  justify-content: center;
   font-family: var(--font-inter), Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -153,6 +158,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
   margin-top: 36px;
 }
 
@@ -188,27 +194,26 @@ h3 {
 }
 
 .hero-visual {
-  align-self: stretch;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(17, 17, 17, 0.1)),
-    url("https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=1200&q=82");
-  background-position: center;
-  background-size: cover;
+  animation: fadeIn 900ms ease both;
+  background: var(--paper);
+  height: clamp(420px, 48vw, 720px);
   margin: 0;
-  min-height: 560px;
+  overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
-.image-caption {
-  background: rgba(255, 255, 255, 0.86);
-  bottom: 18px;
-  color: var(--muted);
-  font-family: var(--font-inter), Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  left: 18px;
-  padding: 9px 12px;
+.hero-visual::before {
+  animation: productDrift 16s ease-in-out infinite alternate;
+  background-image: url("/images/nanacha-product-lineup.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  inset: 0;
   position: absolute;
+  transform: scale(1.01);
+  transform-origin: center;
 }
 
 .section {
@@ -433,6 +438,57 @@ h3 {
   max-width: 760px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes productDrift {
+  from {
+    transform: scale(1.01) translateX(-0.4%);
+  }
+
+  to {
+    transform: scale(1.045) translateX(0.4%);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .section {
+    animation: fadeUp both;
+    animation-range: entry 8% cover 28%;
+    animation-timeline: view();
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
 .footer {
   align-items: center;
   border-top: 1px solid var(--line);
@@ -480,11 +536,11 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 56px;
+    padding-top: 20px;
   }
 
   .hero-visual {
-    min-height: 390px;
+    height: clamp(300px, 74vw, 520px);
   }
 
   .grid {
@@ -530,5 +586,14 @@ h3 {
 
   h1 {
     font-size: clamp(56px, 18vw, 76px);
+  }
+
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-meta,
+  .actions {
+    justify-content: flex-start;
   }
 }

@@ -126,9 +126,7 @@ export default async function Home() {
             </Link>
           </div>
         </div>
-        <figure className="hero-visual" aria-label="冷たいミルクティー">
-          <span className="image-caption">Milk tea, made light.</span>
-        </figure>
+        <figure className="hero-visual" aria-label="nanachaのミルクティーとタピオカ" />
       </section>
 
       <section className="section">
