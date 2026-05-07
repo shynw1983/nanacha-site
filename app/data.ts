@@ -29,7 +29,7 @@ export const featuredDrinks: MenuItem[] = [
     name: "黒糖タピオカミルク",
     tag: "Tapioca",
     description:
-      "コクのある黒糖ともちもち食感。福岡の帰り道に選びたくなる満足感。",
+      "コクのある黒糖ともちもち食感。夜の一杯にも選びたくなる満足感。",
     price: "TBD",
   },
   {

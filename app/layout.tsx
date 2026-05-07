@@ -17,7 +17,7 @@ const notoSansJp = Noto_Sans_JP({
 
 const siteName = "nanacha";
 const description =
-  "福岡で6年続くミルクティーとタピオカのテイクアウトスタンド。日本茶の香り、甘さ控えめ、駅近で受け取りやすい一杯を。";
+  "福岡市中央区清川のミルクティーとタピオカのテイクアウトスタンド。日本茶の香り、甘さ控えめ、夜遅くまで楽しめる一杯を。";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nanacha.jp"),
@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     "福岡 ミルクティー",
     "福岡 タピオカ",
     "福岡 テイクアウト",
+    "清川 ミルクティー",
+    "清川 タピオカ",
+    "福岡 深夜 カフェ",
+    "福岡 夜 タピオカ",
     "福岡 奶茶",
     "福岡 バブルティー",
     "福岡 カフェ",

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "nanachaについて",
   description:
-    "福岡で6年続くnanachaのブランド紹介。日本茶、甘さ控えめ、店内仕込みの考え方。",
+    "福岡市中央区清川のnanachaのブランド紹介。日本茶、甘さ控えめ、夜まで楽しめるミルクティーとタピオカ。",
   alternates: {
     canonical: "/about",
   },
@@ -16,8 +16,8 @@ export default function AboutPage() {
         <p className="eyebrow">ABOUT</p>
         <h1>nanachaについて</h1>
         <p className="lead">
-          nanachaは、福岡で6年続くミルクティースタンドです。
-          日本茶の香りと、日常で飲み続けられる軽さを大切にしています。
+          nanachaは、福岡市中央区清川のミルクティースタンドです。
+          日本茶の香りと、昼にも夜にも飲みやすい軽さを大切にしています。
         </p>
       </section>
       <section className="section">
@@ -38,9 +38,9 @@ export default function AboutPage() {
           </article>
           <article className="item">
             <span className="tag">Local</span>
-            <h3>福岡の日常へ</h3>
+            <h3>清川の街へ</h3>
             <p>
-              駅近で受け取りやすく、仕事や学校の前後に自然と立ち寄れるお店でありたい。
+              清川・渡辺通・住吉エリアで、昼の休憩にも夜の食後にも自然と立ち寄れるお店でありたい。
             </p>
           </article>
         </div>

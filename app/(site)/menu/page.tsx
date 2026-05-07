@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { getMenuItems, groupMenuItems } from "../../lib/menu";
 
 export const metadata: Metadata = {
-  title: "メニュー | 福岡のミルクティー・タピオカ",
+  title: "メニュー | 清川のミルクティー・タピオカ",
   description:
-    "福岡のnanachaメニュー。ミルクティー、黒糖タピオカ、抹茶ミルク、ほうじ茶ミルク、季節限定ドリンクを掲載しています。",
+    "福岡市中央区清川のnanachaメニュー。ミルクティー、黒糖タピオカ、抹茶ミルク、ほうじ茶ミルク、季節限定ドリンクを掲載しています。",
   alternates: {
     canonical: "/menu",
   },
@@ -44,10 +44,10 @@ export default async function MenuPage() {
       />
       <section className="page-hero">
         <p className="eyebrow">MENU</p>
-        <h1>福岡のミルクティーとタピオカ。</h1>
+        <h1>清川のミルクティーとタピオカ。</h1>
         <p className="lead">
           nanachaのメニュー一覧。ミルクティー、黒糖タピオカ、抹茶ミルク、
-          ほうじ茶ミルク、季節限定ドリンクを、気分に合わせて選べます。
+          ほうじ茶ミルク、季節限定ドリンクを、昼にも夜にも気分に合わせて選べます。
         </p>
       </section>
       <section className="section">

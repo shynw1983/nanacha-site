@@ -6,13 +6,13 @@ const shopJsonLd = {
   "@type": "CafeOrCoffeeShop",
   name: "nanacha",
   description:
-    "福岡で6年続く、ミルクティーとタピオカのテイクアウトスタンド。",
+    "福岡市中央区清川のミルクティーとタピオカのテイクアウトスタンド。",
   address: {
     "@type": "PostalAddress",
     addressLocality: "福岡市",
     addressRegion: "福岡県",
     addressCountry: "JP",
-    streetAddress: "住所未設定",
+    streetAddress: "中央区清川2-9-6",
   },
   servesCuisine: [
     "ミルクティー",
@@ -23,20 +23,21 @@ const shopJsonLd = {
   ],
   url: "https://nanacha.jp",
   priceRange: "¥¥",
+  openingHours: "Mo-Su 12:00-00:30",
 };
 
 const reasons = [
   {
-    title: "福岡で6年",
-    text: "観光地の特別な一杯ではなく、通勤、通学、買い物の途中で選ばれる日常のミルクティーを続けてきました。",
+    title: "清川の一杯",
+    text: "福岡市中央区清川で、街の流れに寄り添うミルクティーとタピオカをつくっています。",
   },
   {
     title: "甘さ控えめ",
     text: "ミルクの重さを抑え、お茶の香りと後味の軽さを大切に。毎日飲みやすいバランスに整えます。",
   },
   {
-    title: "テイクアウト中心",
-    text: "駅近で受け取りやすく、店頭、モバイルオーダー、LINE、デリバリーへ迷わず進める導線を用意しています。",
+    title: "夜遅くまで",
+    text: "12:00から0:30まで。昼の一杯にも、食後や夜のテイクアウトにも選びやすい営業時間です。",
   },
 ];
 
@@ -51,12 +52,17 @@ const faqs = [
   {
     question: "福岡でタピオカやミルクティーをテイクアウトできますか？",
     answer:
-      "はい。nanachaは福岡のテイクアウト向けミルクティースタンドです。店頭受け取りのほか、モバイルオーダー、LINE、Uber Eatsへの導線を用意しています。",
+      "はい。nanachaは福岡市中央区清川のテイクアウト向けミルクティースタンドです。店頭受け取りのほか、モバイルオーダー、LINE、Uber Eatsへの導線を用意しています。",
   },
   {
     question: "甘さ控えめにできますか？",
     answer:
       "できます。日本茶の香りを生かすため、甘さ控えめでも飲みやすいバランスを大切にしています。",
+  },
+  {
+    question: "夜遅くでも利用できますか？",
+    answer:
+      "営業時間は12:00から0:30までです。昼のドリンクにも、夜の食後の一杯にも利用しやすい時間帯で営業しています。",
   },
   {
     question: "季節限定メニューはありますか？",
@@ -99,12 +105,12 @@ export default async function Home() {
           <p className="eyebrow">FUKUOKA MILK TEA / TAPIOCA</p>
           <h1>nanacha</h1>
           <p className="lead">
-            福岡で6年。日本茶の香りを生かしたミルクティーと、
-            もちもちのタピオカを、駅近のテイクアウトで。
+            福岡市中央区清川で、日本茶の香りを生かしたミルクティーと
+            もちもちのタピオカを。昼から夜遅くまで、軽く立ち寄れる一杯を。
           </p>
           <div className="hero-meta" aria-label="ブランド情報">
-            <span>Since 2018</span>
-            <span>Fukuoka</span>
+            <span>Kiyokawa, Fukuoka</span>
+            <span>12:00-0:30</span>
             <span>Milk Tea</span>
             <span>Tapioca</span>
           </div>
@@ -129,11 +135,11 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">REASON</p>
-            <h2>福岡で、日常の一杯として選ばれる理由。</h2>
+            <h2>清川で、昼にも夜にも選べる一杯。</h2>
           </div>
           <p>
-            大きなチェーンにはない距離感で、福岡の毎日に合う味と受け取りやすさを
-            ひとつずつ整えています。
+            駅前のスピード感とは少し違う、街の中でふっと立ち寄れる距離感。
+            nanachaは清川の毎日に合う味と受け取りやすさを整えています。
           </p>
         </div>
         <div className="grid">
@@ -228,7 +234,8 @@ export default async function Home() {
             <h2>よくある質問。</h2>
           </div>
           <p>
-            福岡でミルクティーやタピオカを探している方に、来店前に知っておきたいことをまとめました。
+            清川・渡辺通・住吉エリアでミルクティーやタピオカを探している方に、
+            来店前に知っておきたいことをまとめました。
           </p>
         </div>
         <div className="faq-list">
@@ -245,20 +252,20 @@ export default async function Home() {
         <div className="split">
           <div>
             <p className="eyebrow">SHOP</p>
-            <h2>福岡で6年。駅近のテイクアウトスタンド。</h2>
+            <h2>福岡市中央区清川。夜まで開いているテイクアウトスタンド。</h2>
           </div>
           <dl className="info-list">
             <div className="info-row">
               <dt>住所</dt>
-              <dd>福岡県福岡市 住所未設定</dd>
+              <dd>福岡県福岡市中央区清川2-9-6</dd>
             </div>
             <div className="info-row">
-              <dt>最寄り駅</dt>
-              <dd>最寄り駅から徒歩約3分</dd>
+              <dt>エリア</dt>
+              <dd>清川・渡辺通・住吉エリア</dd>
             </div>
             <div className="info-row">
               <dt>営業時間</dt>
-              <dd>11:00 - 20:00</dd>
+              <dd>12:00 - 0:30</dd>
             </div>
             <div className="info-row">
               <dt>定休日</dt>
