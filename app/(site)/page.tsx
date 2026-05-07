@@ -101,12 +101,12 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="hero">
+        <figure className="hero-visual" aria-label="nanachaのミルクティーとタピオカ" />
         <div className="hero-copy">
           <p className="eyebrow">FUKUOKA MILK TEA / TAPIOCA</p>
           <h1>nanacha</h1>
           <p className="lead">
-            福岡市中央区清川で、日本茶の香りを生かしたミルクティーと
-            もちもちのタピオカを。昼から夜遅くまで、軽く立ち寄れる一杯を。
+            清川で、昼から夜まで。日本茶ミルクティーとタピオカ。
           </p>
           <div className="hero-meta" aria-label="ブランド情報">
             <span>Kiyokawa, Fukuoka</span>
@@ -126,7 +126,6 @@ export default async function Home() {
             </Link>
           </div>
         </div>
-        <figure className="hero-visual" aria-label="nanachaのミルクティーとタピオカ" />
       </section>
 
       <section className="section">
@@ -136,8 +135,7 @@ export default async function Home() {
             <h2>清川で、昼にも夜にも選べる一杯。</h2>
           </div>
           <p>
-            駅前のスピード感とは少し違う、街の中でふっと立ち寄れる距離感。
-            nanachaは清川の毎日に合う味と受け取りやすさを整えています。
+            清川の街に合う、軽さと香り。
           </p>
         </div>
         <div className="grid">
@@ -179,8 +177,7 @@ export default async function Home() {
             <h2>はじめてでも、いつもの一杯でも。</h2>
           </div>
           <p>
-            ベースのお茶、甘さ、氷、トッピングを選んで、自分にちょうどいい
-            ミルクティーへ。迷ったら定番メニューからどうぞ。
+            お茶、甘さ、氷、トッピングを選んで。
           </p>
         </div>
         <ol className="steps">
@@ -232,8 +229,7 @@ export default async function Home() {
             <h2>よくある質問。</h2>
           </div>
           <p>
-            清川・渡辺通・住吉エリアでミルクティーやタピオカを探している方に、
-            来店前に知っておきたいことをまとめました。
+            来店前に知っておきたいこと。
           </p>
         </div>
         <div className="faq-list">

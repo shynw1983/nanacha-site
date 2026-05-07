@@ -78,19 +78,19 @@ main {
 
 .hero {
   display: grid;
-  gap: clamp(40px, 6vw, 84px);
+  gap: clamp(32px, 5vw, 68px);
   grid-template-columns: 1fr;
   margin: 0 auto;
   max-width: none;
   min-height: calc(100vh - 84px);
-  padding: clamp(28px, 4vw, 56px) 0 clamp(64px, 8vw, 104px);
+  padding: 0 0 clamp(56px, 7vw, 88px);
 }
 
 .hero-copy {
   align-self: center;
   animation: fadeUp 820ms ease both;
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 780px;
   padding: 0 clamp(20px, 5vw, 72px);
   text-align: center;
 }
@@ -113,16 +113,16 @@ p {
 
 h1 {
   font-family: var(--font-inter), var(--font-noto-jp), sans-serif;
-  font-size: clamp(64px, 11vw, 156px);
-  font-weight: 650;
-  line-height: 0.86;
-  margin-bottom: 34px;
+  font-size: clamp(54px, 8vw, 116px);
+  font-weight: 520;
+  line-height: 0.92;
+  margin-bottom: 24px;
 }
 
 h2 {
-  font-size: clamp(34px, 4.9vw, 76px);
-  font-weight: 600;
-  line-height: 1.05;
+  font-size: clamp(26px, 3.2vw, 48px);
+  font-weight: 520;
+  line-height: 1.15;
   margin-bottom: 0;
 }
 
@@ -134,10 +134,12 @@ h3 {
 
 .lead {
   color: var(--muted);
-  font-size: clamp(17px, 1.65vw, 23px);
+  font-size: clamp(14px, 1.15vw, 18px);
   font-weight: 400;
-  line-height: 2;
-  max-width: 680px;
+  line-height: 1.9;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 520px;
 }
 
 .hero-meta {
@@ -150,8 +152,8 @@ h3 {
   font-family: var(--font-inter), Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
-  margin-top: 42px;
-  padding-top: 18px;
+  margin-top: 30px;
+  padding-top: 16px;
 }
 
 .actions {
@@ -159,7 +161,7 @@ h3 {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-top: 36px;
+  margin-top: 28px;
 }
 
 .button {
@@ -196,7 +198,7 @@ h3 {
 .hero-visual {
   animation: fadeIn 900ms ease both;
   background: var(--paper);
-  height: clamp(420px, 48vw, 720px);
+  height: clamp(470px, 54vw, 760px);
   margin: 0;
   overflow: hidden;
   position: relative;
@@ -220,7 +222,7 @@ h3 {
   border-top: 1px solid var(--line);
   margin: 0 auto;
   max-width: 1440px;
-  padding: clamp(72px, 9vw, 132px) clamp(20px, 5vw, 72px);
+  padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 72px);
 }
 
 .section.alt {
@@ -238,8 +240,8 @@ h3 {
 .section-head p,
 .body-copy {
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.95;
+  font-size: 14px;
+  line-height: 1.85;
 }
 
 .grid {
@@ -310,7 +312,7 @@ h3 {
 }
 
 .page-hero h1 {
-  font-size: clamp(48px, 7.8vw, 108px);
+  font-size: clamp(42px, 6vw, 82px);
 }
 
 .page-hero .lead {
@@ -331,7 +333,7 @@ h3 {
 }
 
 .menu-category-head h2 {
-  font-size: clamp(26px, 3.2vw, 44px);
+  font-size: clamp(24px, 2.8vw, 38px);
 }
 
 .menu-row {
@@ -536,11 +538,11 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 20px;
+    padding-top: 0;
   }
 
   .hero-visual {
-    height: clamp(300px, 74vw, 520px);
+    height: clamp(360px, 86vw, 560px);
   }
 
   .grid {
@@ -585,7 +587,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(56px, 18vw, 76px);
+    font-size: clamp(48px, 15vw, 68px);
   }
 
   .hero-copy {
