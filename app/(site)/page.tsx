@@ -32,12 +32,17 @@ export default async function Home() {
       />
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">FUKUOKA MILK TEA STAND</p>
+          <p className="eyebrow">FUKUOKA TEA STAND</p>
           <h1>nanacha</h1>
           <p className="lead">
-            福岡で6年。駅近で、すぐに受け取れる日本茶ミルクティー。
-            甘さ控えめの一杯を、いつもの通学路や仕事帰りに。
+            福岡の日常に、静かな一杯を。日本茶の香りとミルクの軽さを、
+            駅近のテイクアウトで受け取れるミルクティースタンドです。
           </p>
+          <div className="hero-meta" aria-label="ブランド情報">
+            <span>Since 2018</span>
+            <span>Fukuoka</span>
+            <span>Takeout</span>
+          </div>
           <div className="actions">
             <Link className="button primary" href="/menu">
               メニューを見る
@@ -47,18 +52,20 @@ export default async function Home() {
             </Link>
           </div>
         </div>
-        <div className="hero-visual" aria-label="冷たいミルクティー" />
+        <figure className="hero-visual" aria-label="冷たいミルクティー">
+          <span className="image-caption">Milk tea, made light.</span>
+        </figure>
       </section>
 
       <section className="section">
         <div className="section-head">
           <div>
             <p className="eyebrow">DAILY STANDARD</p>
-            <h2>毎日に寄り添う、軽い飲み心地。</h2>
+            <h2>毎日に選べる、澄んだ飲み心地。</h2>
           </div>
           <p>
-            日本茶の香り、ミルクのまろやかさ、甘さ控えめのバランス。
-            nanachaは、福岡の日常で選びやすいテイクアウトドリンクを届けます。
+            甘さ、香り、後味。そのすべてを重くしすぎず、通勤前にも帰り道にも
+            自然に選べる一杯へ整えています。
           </p>
         </div>
         <div className="grid">
@@ -75,12 +82,12 @@ export default async function Home() {
       <section className="section alt">
         <div className="section-head">
           <div>
-            <p className="eyebrow">MOBILE ORDER</p>
-            <h2>待ち時間を少なく、帰り道を軽く。</h2>
+            <p className="eyebrow">ORDER</p>
+            <h2>受け取りまで、すっきりと。</h2>
           </div>
           <p>
-            モバイルオーダー、LINE、Uber Eatsへの導線を用意しています。
-            現在は公開前のため、リンクは仮設定です。
+            店頭、モバイルオーダー、LINE、デリバリー。日常の流れを止めない
+            受け取り方を用意しています。
           </p>
         </div>
         <div className="actions">
@@ -100,7 +107,7 @@ export default async function Home() {
         <div className="section-head">
           <div>
             <p className="eyebrow">SEASONAL</p>
-            <h2>季節で変わる、今日の一杯。</h2>
+            <h2>季節の余白を、一杯に。</h2>
           </div>
           <Link className="button ghost" href="/seasonal">
             季節限定を見る
@@ -121,7 +128,7 @@ export default async function Home() {
         <div className="split">
           <div>
             <p className="eyebrow">SHOP</p>
-            <h2>福岡の駅近テイクアウトスタンド。</h2>
+            <h2>福岡で6年。日常に近い場所で。</h2>
           </div>
           <dl className="info-list">
             <div className="info-row">

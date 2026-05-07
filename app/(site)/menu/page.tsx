@@ -20,8 +20,8 @@ export default async function MenuPage() {
         <p className="eyebrow">MENU</p>
         <h1>メニュー</h1>
         <p className="lead">
-          日本茶の香りを生かしたミルクティーと、福岡の日常で選びやすいタピオカドリンク。
-          価格と詳細は正式公開前の仮内容です。
+          日本茶の香りを生かしたミルクティーと、福岡の日常で選びやすい
+          タピオカドリンク。気分に合わせて、軽く、まっすぐに。
         </p>
       </section>
       <section className="section">
